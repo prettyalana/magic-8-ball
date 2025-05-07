@@ -16,12 +16,13 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 #logo {
 
-    max-height: 5rem;
-    max-width: 5rem;
+    max-height: 4rem;
+    max-width: 4rem;
     border-radius: 50%;
 }
 
@@ -34,7 +35,7 @@ a {
 }
 
 #logo-link {
-    font-size: 1.5em;
+    font-size: 1em;
 }
 
 .links {
@@ -74,8 +75,9 @@ h1 {
 }
 
 #magic-eight-ball {
-    height: 80%;
-    width: 80%;
+    height: 75%;
+    width: 75%;
+    border-radius: 100%;
 }
 
 
@@ -124,9 +126,19 @@ button:hover {
     font-size: 1em;
 }
 
-h1,
+h1 {
+    margin: 50px 0 20px 0;
+}
+
 .center-wrapper,
 .bottom-wrapper {
     margin: 20px 0 20px 0;
 }
 
+@media (min-width: 600px) {
+    #magic-eight-ball {
+        height: 25%;
+        width: 25%;
+        border-radius: 100%;
+    }
+}
