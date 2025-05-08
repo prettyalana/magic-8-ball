@@ -92,7 +92,7 @@ label {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 16px;
+  margin-top: 1rem;
 }
 
 #question {
@@ -121,15 +121,15 @@ button:hover {
 }
 
 h1 {
-  margin: 50px 0 20px 0;
+  margin: 3.125rem 0 1.25rem 0;
 }
 
 .center-wrapper,
 .bottom-wrapper {
-  margin: 20px 0 20px 0;
+  margin: 1.25rem 0 1.25rem 0;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37.5rem) {
   #magic-eight-ball {
     height: 25%;
     width: 25%;
