@@ -1,4 +1,5 @@
 function eightBall(
+  // Parameters (Placeholders) for the three defined arrays
   positiveAnswers: string[],
   neutralAnswers: string[],
   negativeAnswers: string[]
@@ -19,6 +20,8 @@ function eightBall(
   return combinedArray[randomIndex];
 }
 
+// Arrays defined outside of the eightBall function scope 
+// Accessible globally 
 const positiveAnswers: string[] = [
   "It is certain.",
   "It is decidedly so.",
@@ -39,6 +42,7 @@ const neutralAnswers: string[] = [
 ];
 
 const negativeAnswers: string[] = [
+  "No",
   "Don't count on it.",
   "My reply is no.",
   "My sources say no.",
