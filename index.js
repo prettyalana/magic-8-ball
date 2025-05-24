@@ -1,17 +1,16 @@
-"use strict";
 function eightBall(
 // Parameters (Placeholders) for the three defined arrays
 positiveAnswers, neutralAnswers, negativeAnswers) {
-    let question = document.getElementById("question").value;
+    var question = document.getElementById("question").value;
     // Combine the arrays
-    const combinedArray = positiveAnswers.concat(neutralAnswers, negativeAnswers);
+    var combinedArray = positiveAnswers.concat(neutralAnswers, negativeAnswers);
     // Get a random index from the combined arrays
-    const randomIndex = Math.floor(Math.random() * combinedArray.length);
+    var randomIndex = Math.floor(Math.random() * combinedArray.length);
     return combinedArray[randomIndex];
 }
-// Arrays defined outside of the eightBall function scope 
-// Accessible globally 
-const positiveAnswers = [
+// Arrays defined outside of the eightBall function scope
+// Accessible globally
+var positiveAnswers = [
     "It is certain.",
     "It is decidedly so.",
     "Yes",
@@ -21,14 +20,14 @@ const positiveAnswers = [
     "Outlook good.",
     "Signs point to yes.",
 ];
-const neutralAnswers = [
+var neutralAnswers = [
     "Reply hazy, try again.",
     "Ask again later.",
     "Better not tell you now.",
     "Cannot predict now.",
     "Concentrate and ask again.",
 ];
-const negativeAnswers = [
+var negativeAnswers = [
     "No",
     "Don't count on it.",
     "My reply is no.",
@@ -36,14 +35,18 @@ const negativeAnswers = [
     "Very doubtful.",
 ];
 // Attach submit event listener to form
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.getElementById("eightBallForm");
-    const answer = document.getElementById("eightBallAnswer");
-    form.addEventListener("submit", (event) => {
+document.addEventListener("DOMContentLoaded", function () {
+    var form = document.getElementById("eightBallForm");
+    var answer = document.getElementById("eightBallAnswer");
+    form.addEventListener("submit", function (event) {
+        var _this = this;
         // Prevent page reload
         event.preventDefault();
-        const eightBallAnswer = eightBall(positiveAnswers, neutralAnswers, negativeAnswers);
-        console.log(eightBallAnswer);
+        var eightBallAnswer = eightBall(positiveAnswers, neutralAnswers, negativeAnswers);
         answer.textContent = eightBallAnswer;
+        // Makes the text inside the form input disappear after 5 seconds
+        setTimeout(function () {
+            _this.reset();
+        }, 5000);
     });
 });

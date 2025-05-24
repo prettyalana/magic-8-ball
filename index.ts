@@ -20,8 +20,8 @@ function eightBall(
   return combinedArray[randomIndex];
 }
 
-// Arrays defined outside of the eightBall function scope 
-// Accessible globally 
+// Arrays defined outside of the eightBall function scope
+// Accessible globally
 const positiveAnswers: string[] = [
   "It is certain.",
   "It is decidedly so.",
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "eightBallAnswer"
   ) as HTMLParagraphElement;
 
-  form.addEventListener("submit", (event: Event) => {
+  form.addEventListener("submit", function (this: HTMLFormElement, event) {
     // Prevent page reload
     event.preventDefault();
 
@@ -65,7 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
       neutralAnswers,
       negativeAnswers
     );
-    console.log(eightBallAnswer);
     answer.textContent = eightBallAnswer;
+
+    // Makes the text inside the form input disappear after 5 seconds
+    setTimeout(() => {
+      this.reset();
+    }, 5000);
   });
 });
