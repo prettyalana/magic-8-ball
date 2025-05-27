@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Makes the text inside the form input disappear after 5 seconds
         setTimeout(function () {
             _this.reset();
+            answer.textContent = "";
         }, 5000);
     });
 });
