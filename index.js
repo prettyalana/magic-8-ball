@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
         var eightBallAnswer = eightBall(positiveAnswers, neutralAnswers, negativeAnswers);
         answer.textContent = eightBallAnswer;
-        // Makes the text inside the form input disappear after 5 seconds
+        // Makes the text inside the form input and answer disappear after 5 seconds
         setTimeout(function () {
             _this.reset();
             answer.textContent = "";
